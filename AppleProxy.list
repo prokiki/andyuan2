@@ -30,7 +30,6 @@ DOMAIN,news-events.apple.com
 DOMAIN,np-edge.itunes.apple.com
 DOMAIN,play-edge.itunes.apple.com
 DOMAIN,sandbox.itunes.apple.com
-DOMAIN,testflight.apple.com
 DOMAIN,tv.applemusic.com
 DOMAIN,uts-api.itunes.apple.com
 DOMAIN-SUFFIX,apple-dns.net
@@ -44,5 +43,4 @@ DOMAIN-SUFFIX,digicert.com
 DOMAIN-SUFFIX,hls-amt.itunes.apple.com
 DOMAIN-SUFFIX,hls.itunes.apple.com
 DOMAIN-SUFFIX,ocsp.apple.com
-DOMAIN-SUFFIX,tv.apple.com
 PROCESS-NAME,LookupViewService

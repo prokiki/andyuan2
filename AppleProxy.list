@@ -6,6 +6,7 @@
 # DOMAIN-SUFFIX: 12
 # PROCESS-NAME: 1
 # TOTAL: 40
+DOMAIN,amp-api.podcasts.apple.com
 DOMAIN,podcasts.itunes.apple.com
 DOMAIN,api-glb-sea.smoot.apple.com
 DOMAIN,apple.comscoreresearch.com

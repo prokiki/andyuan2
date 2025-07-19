@@ -6,6 +6,10 @@
 # DOMAIN-SUFFIX: 12
 # PROCESS-NAME: 1
 # TOTAL: 40
+DOMAIN,mzstorekit.itunes.apple.com
+DOMAIN,inappcheck.itunes.apple.com
+DOMAIN,fpinit.itunes.apple.com
+DOMAIN,entitlements-edge.itunes.apple.com
 DOMAIN,bookkeeper.itunes.apple.com
 DOMAIN,xp.apple.com
 DOMAIN,amp-api.podcasts.apple.com

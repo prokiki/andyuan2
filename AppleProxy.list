@@ -1,56 +1,51 @@
-# NAME: AppleProxy
-# AUTHOR: blackmatrix7
-# REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-06-06 09:17:01
-# DOMAIN: 27
-# DOMAIN-SUFFIX: 12
-# PROCESS-NAME: 1
-# TOTAL: 40
-DOMAIN,mzstorekit.itunes.apple.com
-DOMAIN,inappcheck.itunes.apple.com
-DOMAIN,fpinit.itunes.apple.com
-DOMAIN,entitlements-edge.itunes.apple.com
-DOMAIN,bookkeeper.itunes.apple.com
-DOMAIN,xp.apple.com
-DOMAIN,amp-api.podcasts.apple.com
-DOMAIN,podcasts.itunes.apple.com
-DOMAIN,api-glb-sea.smoot.apple.com
-DOMAIN,apple.comscoreresearch.com
-DOMAIN,books.itunes.apple.com
-DOMAIN,cdn.apple-cloudkit.com
-DOMAIN,cvws.icloud-content.com
-DOMAIN,developer.apple.com
-DOMAIN,devimages-cdn.apple.com
-DOMAIN,devstreaming-cdn.apple.com
-DOMAIN,docs-assets.developer.apple.com
-DOMAIN,gspe1-ssl.ls.apple.com
-DOMAIN,hls-svod.itunes.apple.com
-DOMAIN,itunes.apple.com
-DOMAIN,js-cdn.music.apple.com
-DOMAIN,lookup-api.apple.com
-DOMAIN,mask-api.icloud.com
-DOMAIN,mask-h2.icloud.com
-DOMAIN,mask.icloud.com
-DOMAIN,news-assets.apple.com
+# --- Apple Services Need Proxy (Podcasts / Books / Private Relay / News / TestFlight / Some iCloud) ---
+
+# 1) Apple Podcasts（播客）
+DOMAIN,amp-api.podcasts-lb.itunes.apple.com
+DOMAIN,aod.itunes.apple.com
+DOMAIN,audio.itunes.apple.com
+DOMAIN,ioshost.qttcdn.com         # 播客音频常见第三方分发，若没命中可注释
+DOMAIN-SUFFIX,podcasts.apple.com
+DOMAIN-SUFFIX,amp-api-music-lb.itunes.apple.com
+
+# 2) Apple Books / iBooks（书库）
+DOMAIN,books.apple.com
+DOMAIN,ibooks.apple.com
+DOMAIN-SUFFIX,books.itunes.apple.com
+
+# 3) Apple News
 DOMAIN,news-client.apple.com
 DOMAIN,news-edge.apple.com
 DOMAIN,news-events.apple.com
-DOMAIN,np-edge.itunes.apple.com
-DOMAIN,play-edge.itunes.apple.com
-DOMAIN,sandbox.itunes.apple.com
-DOMAIN,testflight.apple.com
-DOMAIN,tv.applemusic.com
-DOMAIN,uts-api.itunes.apple.com
-DOMAIN-SUFFIX,apple-dns.net
 DOMAIN-SUFFIX,apple.news
-DOMAIN-SUFFIX,apps.apple.com
-DOMAIN-SUFFIX,appsto.re
-DOMAIN-SUFFIX,audio-ssl.itunes.apple.com
-DOMAIN-SUFFIX,blobstore.apple.com
-DOMAIN-SUFFIX,cdn-apple.com
-DOMAIN-SUFFIX,digicert.com
-DOMAIN-SUFFIX,hls-amt.itunes.apple.com
-DOMAIN-SUFFIX,hls.itunes.apple.com
-DOMAIN-SUFFIX,ocsp.apple.com
-DOMAIN-SUFFIX,tv.apple.com
+
+# 4) iCloud Private Relay（私密中继）与相关掩码域
+DOMAIN,mask.icloud.com
+DOMAIN,mask-api.icloud.com
+DOMAIN,mask-h2.icloud.com
+DOMAIN-SUFFIX,mask.apple-dns.net
+
+# 5) iCloud（确需外网的一些接口；如无需求可按需注释）
+DOMAIN,ess.apple.com              # 部分激活/会话握手在外网环境更稳
+DOMAIN,ls.apple.com               # 有时与会话/定位相关
+DOMAIN,lookup-api.apple.com
+DOMAIN,cvws.icloud-content.com
+DOMAIN-SUFFIX,icloud-content.com
+
+# 6) TestFlight（部分地区需代理）
+DOMAIN,testflight.apple.com
+
+# 7) 其它确有海外出口需求的 iTunes/媒体接口（与播客/书库相关）
+DOMAIN,itunes.apple.com
+DOMAIN,developer.apple.com        # 开发者文档/下载在部分网络下需代理
+DOMAIN,video.itunes.apple.com
+# DOMAIN-SUFFIX,applemusic.apple.com  # 仅当需要让 Apple Music 某些海外接口走代理时才保留
+# 如仅需播客与书库，可把上面这行注释掉
+
+# 8) 兜底（仅在你希望广义的“与媒体/播客/书库相关”都走代理时使用；否则建议不要加过宽的 KEYWORD）
+# DOMAIN-KEYWORD,podcast
+# DOMAIN-KEYWORD,ibooks
+# DOMAIN-KEYWORD,books
+
+# 9)（可选）进程匹配：在 macOS/iOS 上需触发 Lookup 时的网络调用
 PROCESS-NAME,LookupViewService

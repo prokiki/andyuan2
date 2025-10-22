@@ -2,7 +2,7 @@
 DOMAIN,amp-api.podcasts-lb.itunes.apple.com
 DOMAIN,aod.itunes.apple.com
 DOMAIN,audio.itunes.apple.com
-DOMAIN,ioshost.qttcdn.com         
+DOMAIN-SUFFIX,qttcdn.com        
 DOMAIN-SUFFIX,podcasts.apple.com
 DOMAIN-SUFFIX,amp-api-music-lb.itunes.apple.com
 DOMAIN,books.apple.com

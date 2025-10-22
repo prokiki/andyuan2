@@ -1,0 +1,20 @@
+# ---- Apple Podcasts（播客）需要代理 ----
+DOMAIN-SUFFIX,podcasts.apple.com
+DOMAIN,amp-api.podcasts-lb.itunes.apple.com
+DOMAIN,aod.itunes.apple.com
+DOMAIN,audio.itunes.apple.com
+DOMAIN,itunes.apple.com
+
+# ---- Apple News（新闻）需要代理 ----
+DOMAIN-SUFFIX,apple.news
+DOMAIN,news-client.apple.com
+DOMAIN,news-edge.apple.com
+DOMAIN,news-events.apple.com
+
+# ---- Apple 媒体服务／认证接口（建议也代理） ----
+DOMAIN-SUFFIX,apple.com
+DOMAIN-SUFFIX,apple-cloudkit.com
+DOMAIN-SUFFIX,apple-mapkit.com
+DOMAIN-SUFFIX,cdn-apple.com
+DOMAIN-SUFFIX,icloud-content.com
+DOMAIN-SUFFIX,icloud.com

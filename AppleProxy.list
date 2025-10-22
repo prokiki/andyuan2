@@ -1,7 +1,7 @@
-# --- Apple Services Need Proxy (Podcasts / Books / Private Relay / News / TestFlight / Some iCloud) ---
+# Apple Services Need Proxy (Podcasts / Books / Private Relay / News / TestFlight / Some iCloud)
 DOMAIN,amp-api.podcasts-lb.itunes.apple.com
 DOMAIN,aod.itunes.apple.com
-DOMAIN,audio.itunes.apple.com    
+DOMAIN,audio.itunes.apple.com
 DOMAIN-SUFFIX,podcasts.apple.com
 DOMAIN-SUFFIX,amp-api-music-lb.itunes.apple.com
 DOMAIN,books.apple.com
@@ -15,14 +15,14 @@ DOMAIN,mask.icloud.com
 DOMAIN,mask-api.icloud.com
 DOMAIN,mask-h2.icloud.com
 DOMAIN-SUFFIX,mask.apple-dns.net
-DOMAIN,ess.apple.com             
-DOMAIN,ls.apple.com               
+DOMAIN,ess.apple.com
+DOMAIN,ls.apple.com
 DOMAIN,lookup-api.apple.com
 DOMAIN,cvws.icloud-content.com
 DOMAIN-SUFFIX,icloud-content.com
 DOMAIN,testflight.apple.com
 DOMAIN,itunes.apple.com
-DOMAIN,developer.apple.com       
+DOMAIN,developer.apple.com
 DOMAIN,video.itunes.apple.com
 PROCESS-NAME,LookupViewService
 # DOMAIN-SUFFIX,applemusic.apple.com

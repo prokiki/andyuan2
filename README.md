@@ -21,3 +21,8 @@
 - `https://raw.githubusercontent.com/prokiki/andyuan2/main/prokiki.ini`
 
 更新订阅后，应用配置即可。
+
+
+## 备注
+
+- 已注释的候选规则/策略已迁移到 `prokiki.disabled.ini` 备用。

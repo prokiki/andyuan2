@@ -1,6 +1,6 @@
 # andyuan2
 
-自用 OpenClash 分流规则（`qichiyu.ini`）。
+自用 OpenClash 分流规则（`prokiki.ini`）。
 
 ## 最近调整（2026-02-17）
 
@@ -12,12 +12,12 @@
 - 降低部分重叠规则：
   - 注释 `GoogleCN.list`（保留 Google 主规则）
   - 注释 `Domestic IPs.list`（由 `GEOIP,CN` 覆盖）
-- 增加 `qichiyu.ini` 结构化注释，便于长期维护。
+- 增加 `prokiki.ini` 结构化注释，便于长期维护。
 
 ## 使用方式
 
 在 OpenClash 订阅转换模板中引用：
 
-- `https://raw.githubusercontent.com/prokiki/andyuan2/main/qichiyu.ini`
+- `https://raw.githubusercontent.com/prokiki/andyuan2/main/prokiki.ini`
 
 更新订阅后，应用配置即可。
